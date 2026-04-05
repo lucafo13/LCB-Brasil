@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Share+Tech+Mono&display=swap");
 
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 body {
   text-align: center;
   background-color: #0d0d0d;
