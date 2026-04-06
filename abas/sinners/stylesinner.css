@@ -1,0 +1,133 @@
+body {
+  text-align: center;
+  background-color: #0d0d0d;
+  background-image:
+    linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+    linear-gradient(90deg, rgba(255, 0, 0, 0.03)), rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03);
+  background-size:
+    100% 4px,
+    3px 100%;
+  text-shadow: gold;
+  color: white;
+  cursor: url(../../assets/normal.png), auto;
+}
+.davez {
+  border: none;
+  background-color: #d32f2f;
+}
+h1,
+h2 {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+nav {
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+.superior {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: ease 0.9s all;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 20px;
+  align-items: flex-start;
+  padding: 20px;
+}
+.superior.ativo {
+  opacity: 1;
+  transform: translateY(0);
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #d32f2f;
+  background-color: #1a1a1a;
+  overflow: hidden;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d32f2f;
+  transition: 0.5s;
+}
+li a:hover {
+  background-color: #d32f2f;
+  border: none;
+  color: white;
+  font-weight: bolder;
+}
+ul span {
+  float: right;
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+ul li {
+  float: left;
+}
+.sinnergrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 20px;
+  align-items: flex-start;
+  padding: 20px;
+}
+.sinnercard {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-left: 5px solid #d32f2f;
+  border-radius: 5px;
+  padding: 15px;
+  width: 250px;
+  height: 500px;
+  text-align: center;
+  transition: transform 0.25s;
+
+  margin: 10px;
+}
+.sinnercard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(211, 47, 47, 0.3);
+}
+.sinnercard img {
+  border-radius: 3px;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+.sinnercard h2 {
+  color: #d32f2f;
+  margin: 10px 0 5px;
+}
+.sinnercard button {
+  background-color: transparent;
+  border: 1px solid #d32f2f;
+  color: #d32f2f;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s;
+}
+.sinnercard button:hover {
+  background-color: #d32f2f;
+  color: white;
+}
