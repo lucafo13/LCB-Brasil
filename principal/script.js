@@ -16,6 +16,15 @@ window.addEventListener("scroll", function () {
     }
   }
 });
+window.addEventListener("scroll", function () {
+  let supimpa = document.getElementById("banners");
+  if (supimpa) {
+    let pos = supimpa.getBoundingClientRect().top;
+    if (pos < window.innerHeight) {
+      supimpa.classList.add("show");
+    }
+  }
+});
 
 function atualizarContadores() {
   const agora = new Date();

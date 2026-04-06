@@ -19,12 +19,12 @@ body {
   --vermei: #d32f2f;
   --vescuro: #b71c1c;
   --bordared: solid #d32f2f;
-  --bdn : #1a1a1a;
+  --bdn: #1a1a1a;
   --cursorsel: url("../assets/select.png"), auto;
   --chibi: url(../assets/chibidon-removebg-preview.png);
   --bwhite: solid #dedede;
   --sobravc: rgba(211, 47, 47, 0.3);
-  --sombrave: rgba(211, 47, 47, 0.45)
+  --sombrave: rgba(211, 47, 47, 0.45);
 }
 
 .superior {
@@ -70,7 +70,7 @@ ul li a {
   justify-content: center;
   border: var(--bordared) 1px;
   transition: 0.5s;
-  cursor: var(--cursorsel)
+  cursor: var(--cursorsel);
 }
 
 li a:hover {
@@ -123,9 +123,9 @@ li a:hover::after {
   color: #d32f2f;
 }
 
-
-.linkard1, .linkard2, .linkard {
-
+.linkard1,
+.linkard2,
+.linkard {
   width: 300px;
   height: 200px;
   text-decoration: none;
@@ -139,16 +139,15 @@ li a:hover::after {
   display: inline-flex;
   align-items: flex-end;
 }
-.linkard1{
+.linkard1 {
   background-image: url(../assets/S0_5.png);
 }
-.linkard2{
+.linkard2 {
   background-image: url(../assets/Branch_J-03_Floor_2.png);
 }
-.linkard{
+.linkard {
   background-image: url(../assets/combat.webp);
 }
-
 
 .linkard:hover h3,
 .linkard1:hover h3,
@@ -413,7 +412,6 @@ ul li {
   margin-left: 16px;
   text-decoration: none;
   color: var(--vermei);
-
 }
 
 .pmoon {
@@ -444,10 +442,10 @@ ul li {
     opacity: 1;
   }
 }
-.redes:hover a{
-  cursor: url(../assets/select.png), auto ;
+.redes:hover a {
+  cursor: url(../assets/select.png), auto;
 }
-.banneratual{
+.banneratual {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -455,7 +453,7 @@ ul li {
   margin: 0 auto;
   margin-top: 100px;
 }
-.imagemban{
+.imagemban {
   border: var(--bwhite) 5px;
   border-radius: 10px;
   box-shadow: 0 15px 15px var(--sobravc);
@@ -463,22 +461,46 @@ ul li {
   display: inline-flex;
   margin-left: 30px;
   margin-right: 30px;
-
 }
-.imagemban:hover{
+.imagemban:hover {
   border: var(--bordared) 8px;
   border-radius: 10px;
   box-shadow: 0 20px 20px var(--sombrave);
   transform: translateY(-5px) scale(1.02);
   cursor: var(--cursorsel);
 }
-.nsei{
+.nsei {
   width: 500px;
   height: 300px;
 }
-.boxbanner{
+.boxbanner {
   display: inline-flex;
 }
-.titulo{
+.titulo {
   flex-wrap: wrap;
 }
+.porti {
+  width: 200px;
+  height: 50px;
+  border: 2px var(--bwhite);
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: 0 auto;
+  transition: 0.5s;
+}
+.porti span {
+  font-family: "JetBrains Mono" monospace;
+  font-size: 30px;
+  transition: 0.5s ease;
+}
+.porti:hover {
+  border: 3px var(--bordared);
+  transform: translateY(-6px) scale(1.03);
+}
+.porti:hover span {
+  color: var(--vermei);
+  font-size: 32px;
+}
+/* sybau */
