@@ -1,10 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Share+Tech+Mono&display=swap");
 
-main {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 body {
   text-align: center;
   background-color: #0d0d0d;
@@ -19,21 +14,37 @@ body {
   color: white;
   cursor: url(../assets/normal.png), auto;
 }
+
+:root {
+  --vermei: #d32f2f;
+  --vescuro: #b71c1c;
+  --bordared: solid #d32f2f;
+  --bdn : #1a1a1a;
+  --cursorsel: url("../assets/select.png"), auto;
+  --chibi: url(../assets/chibidon-removebg-preview.png);
+  --bwhite: solid #dedede;
+  --sobravc: rgba(211, 47, 47, 0.3);
+  --sombrave: rgba(211, 47, 47, 0.45)
+}
+
 .superior {
   transition: 0.8s ease all;
   transform: translateY(50px);
   opacity: 0;
 }
+
 .superior.show {
   opacity: 1;
   transform: translateY(0);
 }
+
 nav {
   font-family: "JetBrains Mono", monospace;
   font-optical-sizing: auto;
-  
+  font-weight: weight;
   font-style: normal;
 }
+
 h1,
 h2 {
   font-family: "Oswald", sans-serif;
@@ -45,7 +56,7 @@ ul {
   margin: 0;
   padding: 0;
   border: 1px solid #d32f2f;
-  background-color: #1a1a1a;
+  background-color: var(--bdn);
   overflow: hidden;
 }
 
@@ -57,27 +68,31 @@ ul li a {
   text-align: center;
   align-items: center;
   justify-content: center;
-  border: 1px solid #d32f2f;
+  border: var(--bordared) 1px;
   transition: 0.5s;
-  cursor: url("../assets/select.png"), auto;
+  cursor: var(--cursorsel)
 }
+
 li a:hover {
   background-color: #d32f2f;
   border: none;
   color: white;
   font-weight: bolder;
-  cursor: url("../assets/select.png"), auto;
+  cursor: var(--cursorsel);
   position: relative;
 }
+
 @keyframes apareceu {
   0% {
     rotate: 2deg;
     transform: translateX(-10px);
   }
+
   100% {
     transform: translateX(0);
   }
 }
+
 li a:hover::after {
   content: "";
   background-image: url(../assets/chibidon-removebg-preview.png);
@@ -90,6 +105,7 @@ li a:hover::after {
   position: absolute;
   animation: apareceu 0.5s;
 }
+
 .parte2 {
   display: inline-flex;
   gap: 20px;
@@ -97,6 +113,7 @@ li a:hover::after {
   justify-content: center;
   flex-wrap: wrap;
 }
+
 .linkard:hover,
 .linkard1:hover,
 .linkard2:hover {
@@ -106,8 +123,9 @@ li a:hover::after {
   color: #d32f2f;
 }
 
-.linkard {
-  background-image: url("../assets/combat.webp");
+
+.linkard1, .linkard2, .linkard {
+
   width: 300px;
   height: 200px;
   text-decoration: none;
@@ -121,53 +139,39 @@ li a:hover::after {
   display: inline-flex;
   align-items: flex-end;
 }
-.linkard1 {
-  background-image: url("../assets/S0_5.png");
-  width: 300px;
-  height: 200px;
-  text-decoration: none;
-  border: 20px solid #333;
-  border-radius: 8px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  overflow: hidden;
-  transition: 0.4s ease;
-  display: inline-flex;
-  align-items: flex-end;
+.linkard1{
+  background-image: url(../assets/S0_5.png);
 }
-.linkard2 {
-  background-image: url("../assets/Branch_J-03_Floor_2.png");
-  width: 300px;
-  height: 200px;
-  text-decoration: none;
-  border: 20px solid #333;
-  border-radius: 8px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  overflow: hidden;
-  transition: 0.4s ease;
-  display: inline-flex;
-  align-items: flex-end;
+.linkard2{
+  background-image: url(../assets/Branch_J-03_Floor_2.png);
 }
+.linkard{
+  background-image: url(../assets/combat.webp);
+}
+
+
 .linkard:hover h3,
 .linkard1:hover h3,
 .linkard2:hover h3 {
-  color: #d32f2f; /* Vermelho Limbus */
-  transition: color 0.4s ease; /* Para acompanhar a suavidade do card */
+  color: #d32f2f;
+  /* Vermelho Limbus */
+  transition: color 0.4s ease;
+  /* Para acompanhar a suavidade do card */
 }
+
 h1,
 h2 {
   text-shadow: #d32f2f 0 10px 10px;
   transition: 0.5s;
 }
+
 h1:hover,
 h2:hover {
   color: #b71c1c;
   font-weight: bold;
   transform: translateX(2px);
 }
+
 ul span {
   float: right;
   display: block;
@@ -178,6 +182,7 @@ ul span {
   align-items: center;
   justify-content: center;
 }
+
 ul img {
   float: right;
   display: block;
@@ -186,9 +191,11 @@ ul img {
   height: 20px;
   margin-left: 6px;
 }
+
 ul li {
   float: left;
 }
+
 .sinnergrid {
   display: flex;
   flex-wrap: wrap;
@@ -198,6 +205,7 @@ ul li {
   align-items: flex-start;
   padding: 20px;
 }
+
 .sinnercard {
   background-color: #1a1a1a;
   border: 1px solid #333;
@@ -211,20 +219,24 @@ ul li {
 
   margin: 10px;
 }
+
 .sinnercard:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(211, 47, 47, 0.3);
 }
+
 .sinnercard img {
   border-radius: 3px;
   max-width: 100%;
   height: auto;
   margin-bottom: 10px;
 }
+
 .sinnercard h2 {
   color: #d32f2f;
   margin: 10px 0 5px;
 }
+
 .sinnercard button {
   background-color: transparent;
   border: 1px solid #d32f2f;
@@ -234,10 +246,12 @@ ul li {
   font-family: inherit;
   transition: background 0.2s;
 }
+
 .sinnercard button:hover {
   background-color: #d32f2f;
   color: white;
 }
+
 .lcb {
   background-image: url(../assets/S214_14.png);
   width: 90%;
@@ -254,11 +268,13 @@ ul li {
   margin: 0 auto;
   background-size: cover;
 }
+
 .lcb:hover {
   transform: translateY(-5px);
-  border: 6px solid #d32f2f;
+  border: 6px solid var(--vermei);
   box-shadow: rgba(211, 47, 47, 0.3) 0 15px 15px;
 }
+
 .linkard h3,
 .linkard1 h3,
 .linkard2 h3 {
@@ -285,6 +301,7 @@ ul li {
   pointer-events: none;
   z-index: 10;
 }
+
 .RD,
 .RS {
   display: flex;
@@ -300,11 +317,13 @@ ul li {
   flex-direction: column;
   margin-right: 50px;
 }
+
 .RD:hover,
 .RS:hover {
   border: 2px solid #d32f2f;
   transform: translateY(-7px);
 }
+
 .timer-style {
   font-family: "Orbitron", sans-serif;
   font-size: 2.5rem;
@@ -312,25 +331,36 @@ ul li {
   text-shadow: 0 10px 10px rgba(211, 47, 47, 0.5);
   margin-top: 10px;
 }
+
 .subindu {
   opacity: 0;
   transform: translateY(50px);
   transition: 0.9s ease all;
 }
+
 .subindu.show {
   transform: translateY(0);
   opacity: 1;
 }
+
 .pezao {
   width: 100%;
   height: 150px;
 
   bottom: 0;
   border-top: 3px #dedede solid;
+  transition: 0.5s;
 }
+
+.pezao.passando {
+  border-top: var(--bordared) 3px;
+  animation: pisqueocu 0.5s;
+}
+
 .pes {
   margin-top: 150px;
 }
+
 .info {
   font-family: "JetBrains Mono", monospace;
   margin-top: 30px;
@@ -338,9 +368,11 @@ ul li {
   width: 100%;
   height: 50px;
 }
+
 .zoas {
   font-family: "JetBrains Mono", monospace;
 }
+
 .ek {
   color: #00ff41;
   text-shadow:
@@ -351,6 +383,7 @@ ul li {
   text-transform: uppercase;
   letter-spacing: 3px;
 }
+
 .redes {
   color: #b71c1c;
   font-family: "JetBrains Mono", monospace;
@@ -361,6 +394,7 @@ ul li {
   align-items: center;
   justify-content: center;
 }
+
 .s1:hover,
 .s2:hover,
 .s3:hover {
@@ -370,32 +404,81 @@ ul li {
     0 0 20px rgba(255, 223, 0, 0.6);
   cursor: pointer;
   animation: pisqueocu 0.3s infinite;
+  cursor: url(../assets/select.png), auto;
 }
+
 .s1,
 .s2,
 .s3 {
   margin-left: 16px;
+  text-decoration: none;
+  color: var(--vermei);
+
 }
+
 .pmoon {
   float: right;
   display: inline-flex;
   margin-top: -70px;
   width: 100px;
 }
+
 @keyframes pisqueocu {
   0% {
     opacity: 1;
   }
+
   25% {
     opacity: 0.3;
   }
+
   50% {
     opacity: 0.5;
   }
+
   75% {
     opacity: 0.8;
   }
+
   100% {
     opacity: 1;
   }
+}
+.redes:hover a{
+  cursor: url(../assets/select.png), auto ;
+}
+.banneratual{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+.imagemban{
+  border: var(--bwhite) 5px;
+  border-radius: 10px;
+  box-shadow: 0 15px 15px var(--sobravc);
+  transition: 0.5s;
+  display: inline-flex;
+  margin-left: 30px;
+  margin-right: 30px;
+
+}
+.imagemban:hover{
+  border: var(--bordared) 8px;
+  border-radius: 10px;
+  box-shadow: 0 20px 20px var(--sombrave);
+  transform: translateY(-5px) scale(1.02);
+  cursor: var(--cursorsel);
+}
+.nsei{
+  width: 500px;
+  height: 300px;
+}
+.boxbanner{
+  display: inline-flex;
+}
+.titulo{
+  flex-wrap: wrap;
 }
