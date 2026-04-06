@@ -7,5 +7,8 @@ a jogar sozinhos.
 
 Pretendo atualizar a página frequentemente e, dependendo do quão boa ficar até comprar um domínio.
 
+**ESTA NÃO É UMA VERSÃO FINAL**
+digo que também não é um projeto abandonado, foi se iniciado hoje cedo, pretendo terminá-lo, por claro.
+
 
 Link para teste: https://lucafo13.github.io/Wiki-Limbus-Company-BR-TBID-/Limbus_Company_Fan_Page/principal/index.html
