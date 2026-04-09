@@ -29,24 +29,36 @@ window.addEventListener("scroll", function () {
 function atualizarContadores() {
   const agora = new Date();
 
-  // RESET DIARIO (18h)
+  // --- RESET DIÁRIO (18h) ---
   let resetDiario = new Date();
   resetDiario.setHours(18, 0, 0, 0);
+
   if (agora >= resetDiario) {
     resetDiario.setDate(resetDiario.getDate() + 1);
   }
 
-  // RESET SEMANAL (Quinta 18h)
+  // --- RESET SEMANAL (Quinta 18h) ---
   let resetSemanal = new Date();
+  // Calcula os dias para a próxima quinta (4 = Quinta)
   let diasAteQuinta = (4 - agora.getDay() + 7) % 7;
-  if (diasAteQuinta === 0 && agora >= resetDiario) {
+
+  // Se hoje for quinta, mas já passou das 18h, pula para a próxima semana
+  if (diasAteQuinta === 0 && agora.getHours() >= 18) {
     diasAteQuinta = 7;
   }
+
   resetSemanal.setDate(agora.getDate() + diasAteQuinta);
   resetSemanal.setHours(18, 0, 0, 0);
 
   function exibir(alvo, id, mostrarDia = false) {
     const diff = alvo - agora;
+
+    // Garante que o contador não mostre valores negativos se houver atraso na execução
+    if (diff <= 0) {
+      const elemento = document.getElementById(id);
+      if (elemento) elemento.innerText = mostrarDia ? "0d 00:00:00" : "00:00:00";
+      return;
+    }
 
     const d = Math.floor(diff / (1000 * 60 * 60 * 24));
     const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
@@ -67,6 +79,7 @@ function atualizarContadores() {
 
   exibir(resetDiario, "diario-timer");
   exibir(resetSemanal, "semanal-timer", true);
+}
 }
 
 setInterval(atualizarContadores, 1000);
