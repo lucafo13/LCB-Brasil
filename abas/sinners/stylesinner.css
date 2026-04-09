@@ -321,25 +321,26 @@ table tbody tr:hover td {
 .redes:hover a {
   cursor: url(../assets/select.png), auto;
 }
-.tit{
-  transition: 0.5s ;
+.tit {
+  transition: 0.5s;
   font-family: var(--fonti);
   text-transform: uppercase;
   border-radius: 5px;
 }
-.tittle:hover{
+.tittle:hover {
   color: var(--vermei);
   border-bottom: var(--vescuro);
   border: 2px var(--bordared);
   border-radius: 7px;
-  
 }
-.explica, .tabela{
+.explica,
+.tabela {
   opacity: 0;
   transition: 0.4s ease all;
   transform: translateY(50px);
 }
-.explica.show, .tabela.show{
+.explica.show,
+.tabela.show {
   opacity: 1;
   transform: translateY(0);
 }

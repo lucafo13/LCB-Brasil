@@ -97,11 +97,3 @@ input.addEventListener("keydown", function (e) {
 
   output.scrollTop = output.scrollHeight;
 });
-function termina() {
-  terminal = document.getElementById("terminal");
-  if (terminal.classList.contains("hidden")) {
-    terminal.classList.remove("hidden");
-  } else {
-    terminal.classList.add("hidden");
-  }
-}
