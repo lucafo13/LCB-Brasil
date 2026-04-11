@@ -107,7 +107,29 @@ function addLine(text) {
 
   output.scrollTop = output.scrollHeight;
 }
-
+const posi = [
+  "que azar",
+  "foi quase",
+  "Meh",
+  "opa",
+  "boa conseguiu",
+  "Caralhoooo",
+  "Assista os videos do LCB Horii",
+];
+const vai = [
+  "Vai tirar 000",
+  "vai tirar 00",
+  "Vai tirar nada kkkkkk",
+  "Um usuário ja usou esse comando",
+];
+const prescript = [
+  "Bata na 3º pessoa que encontrar",
+  "escreva um livro de 543 páginas as 3horas",
+  "seja um certo fixer da livraria...",
+  "pinte seu calcanhar de azul",
+  "leve pães de queijo ao dono do site",
+  "um usuario ja recebeu um prescript antes",
+];
 // comandos
 const commands = {
   help: () => {
@@ -138,18 +160,49 @@ const commands = {
   },
   opcoes: () => {
     window.location.href = "#super";
+    output.classList.remove("azule");
   },
   resets: () => {
+    output.classList.remove("azule");
     window.location.href = "#sub";
   },
   pais: () => {
+    output.classList.remove("azule");
     output.innerHTML += `<img src="../assets/brasil.png" width="200px">`;
   },
   eita: () => {
+    output.classList.remove("azule");
     window.location.href = "#lcb";
   },
-
+  myluck: () => {
+    output.classList.remove("azule");
+    alert(posi[Math.floor(Math.random() * posi.length)]);
+  },
+  naogostei: () => {
+    output.classList.remove("azule");
+    alert("vaza");
+    addLine("modo auto-destruição...");
+    setTimeout(() => {
+      window.location.href = "https://www.google.com";
+    }, 5000);
+  },
+  gacha: () => {
+    output.classList.remove("azule");
+    addLine("analisando sua sorte...");
+    setTimeout(() => {
+      addLine(vai[Math.floor(Math.random() * vai.length)]);
+    }, 5000);
+  },
+  index: () => {
+    output.classList.add("azule");
+    output.innerHTML += `<img src="../assets/The_Index_Logo.webp" width="120">`;
+    addLine("a cidade te agraceia com o prescrito: ...");
+    setTimeout(() => {
+      addLine(prescript[Math.floor(Math.random() * prescript.length)]);
+    }, 3000);
+  },
   about: () => {
+    output.classList.remove("azule");
     addLine("Valencina nursefather mais forte e ninguém muda minha opinião");
   },
 };
@@ -159,6 +212,7 @@ function runCommand(cmd) {
   if (commands[cmd]) {
     commands[cmd]();
   } else {
+    output.classList.remove("azule");
     addLine("comando não encontrado 💀 (digite help)");
   }
 }
