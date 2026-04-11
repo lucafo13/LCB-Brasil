@@ -1,16 +1,12 @@
 body {
   text-align: center;
   background-color: #0d0d0d;
-  background-image:
-    linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
-    linear-gradient(90deg, rgba(255, 0, 0, 0.03)), rgba(0, 255, 0, 0.01),
-    rgba(0, 0, 255, 0.03);
-  background-size:
-    100% 4px,
-    3px 100%;
+  background-image: url(../../assets/testando12.png);
+
   text-shadow: gold;
   color: white;
   cursor: url(../../assets/normal.png), auto;
+  background-attachment: fixed;
 }
 :root {
   --vermei: #d32f2f;
@@ -343,4 +339,24 @@ table tbody tr:hover td {
 .tabela.show {
   opacity: 1;
   transform: translateY(0);
+}
+.pid p {
+  font-family: monospace;
+  font-size: 18.5px;
+  padding: 0px 20px;
+}
+.tittle {
+  transition: 0.5s;
+}
+main {
+  z-index: 99;
+}
+.man {
+  width: 90%;
+  height: auto;
+  border: none;
+  background-color: #0d0d0d;
+  margin: auto;
+  opacity: 0.8;
+  z-index: 1;
 }
