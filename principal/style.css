@@ -2,7 +2,8 @@
 
 body {
   text-align: center;
-
+  opacity: 1;
+  transition: opacity 0.5s ease;
   background-image:
     linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
     linear-gradient(
@@ -21,6 +22,9 @@ body {
   cursor: url(../assets/normal.png), auto;
   position: relative;
   z-index: 0;
+}
+body.fade-out {
+  opacity: 0;
 }
 html {
   scroll-behavior: smooth;
@@ -599,6 +603,24 @@ ul li {
   border: var(--bordared) 3px;
   box-shadow: var(--sombrave) 0 20px 20px;
 }
+.termiblue {
+  background-color: #0d0d0d;
+  border: 2px blue solid;
+  height: 300px;
+  width: 70%;
+  margin: 100px auto 0 auto;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  cursor: text;
+  border-radius: 10px;
+  transition: 0.5s;
+  transform: translateY(0);
+}
+.termiblue:hover {
+  border: blue 3px solid;
+  box-shadow: blue 0 20px 20px;
+}
 
 .terminal-line {
   display: flex;
@@ -682,6 +704,9 @@ ul li {
 }
 .azule {
   color: blue;
+}
+.as {
+  color: white;
 }
 .infos a:hover::after {
   width: 100%;

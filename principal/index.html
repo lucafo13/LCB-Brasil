@@ -15,14 +15,17 @@
 </head>
 
 <body>
+    <audio hidden id="index">
+      <source src="../audios/callnewindex.mp3">
+    </audio>
   <div class="tv-wrapper" id="tv">
 
   <nav>
     <ul>
-      <li> <a href="">Traduções</a></li>
+      <li> <a href="../abas/sinners/traducoes/mods.html">Traduções</a></li>
       <li><a title="os sinners da Limbus Company" href="../abas/sinners/sinners.html"> Personagens</a></li>
-      <li><a href="">Lore(spoilers)</a></li>
-      <li><a href="">Dicas</a></li>
+      <li><a href="" onclick="alert('nao finalizado!')">Lore(spoilers)</a></li>
+      <li><a href="" onclick="alert('nao finalizado!')">Dicas</a></li>
       <span style="color: white;">Limbus Company Brasil <img src="../assets/brasil.png" alt=""> </span>
     </ul>
   </nav>
@@ -117,7 +120,7 @@
           <h1 >Mais informações</h1>
           </div>
           <div class="infos">
-            <a href="">Cantos</a>
+            <a href="../abas/sinners/sinners.html">Cantos</a>
             <a href="">Atualizações</a>
             <a href="">Mods</a>
             <a href="">abnormalidades</a>
@@ -145,7 +148,7 @@
       <div id="output"></div>
   <div class="terminal-line">
 
-    <span class="prefix">Dante|10:></span>
+    <span class="prefix" id="dante">Dante|10:></span>
     <input class="textanal" id="input" type="text" autofocus>
   </div>
 </div>

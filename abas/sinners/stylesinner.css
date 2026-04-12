@@ -7,7 +7,9 @@ body {
   color: white;
   cursor: url(../../assets/normal.png), auto;
   background-attachment: fixed;
-  height: 100%;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
 }
 :root {
   --vermei: #d32f2f;
@@ -353,14 +355,13 @@ table tbody tr:hover td {
 .man {
   width: 90%;
   min-height: 100vh;
-
+  display: flow-root;
   border: none;
-  background-color: rgba(13, 13, 13, 0.8);
+  background-color: rgba(13, 13, 13, 0.7);
   backdrop-filter: blur(5px);
   border-radius: 10px;
   margin: 0 auto;
-  opacity: 0.8;
-  position: relative;
-  z-index: 1;
-  margin-top: 20px;
+  overflow: auto;
+
+  margin: 20px auto;
 }

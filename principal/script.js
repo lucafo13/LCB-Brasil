@@ -116,6 +116,7 @@ const posi = [
   "Caralhoooo",
   "Assista os videos do LCB Horii",
 ];
+const audio = document.getElementById("index");
 const vai = [
   "Vai tirar 000",
   "vai tirar 00",
@@ -130,21 +131,35 @@ const prescript = [
   "leve pães de queijo ao dono do site",
   "um usuario ja recebeu um prescript antes",
 ];
+const user = document.getElementById("dante");
 // comandos
 const commands = {
   help: () => {
+    audio.pause();
+    user.classList.remove("as");
+    terminal.classList.add("terminal");
+    terminal.classList.remove("termiblue");
     addLine("comandos disponíveis:");
     addLine("help - mostra comandos");
     addLine("sinners - abre página");
     addLine("clear - limpa terminal");
     addLine("about - sobre o site");
     addLine("dquixote - descobre");
+    input.classList.remove("azule");
     addLine("pais - hexa de 2026");
     addLine("eita - inicio");
     addLine("resets - para resets");
+    addLine("index - prescript");
+
+    addLine("traducao - abre traduções");
   },
 
   sinners: () => {
+    audio.pause();
+    input.classList.remove("azule");
+    terminal.classList.add("terminal");
+    terminal.classList.remove("termiblue");
+    user.classList.remove("as");
     addLine("abrindo sinners...");
     setTimeout(() => {
       window.location.href = "../abas/sinners/sinners.html";
@@ -152,34 +167,86 @@ const commands = {
   },
 
   clear: () => {
+    audio.pause();
+    terminal.classList.add("terminal");
+    terminal.classList.remove("termiblue");
     output.innerHTML = "";
+    user.classList.remove("as");
+    input.classList.remove("azule");
   },
 
   dquixote: () => {
+    audio.pause();
+    input.classList.remove("azule");
+    terminal.classList.add("terminal");
+    user.classList.remove("as");
+    terminal.classList.remove("termiblue");
     output.innerHTML += `<img src="../assets/chibidon-removebg-preview.png" width="200">`;
   },
   opcoes: () => {
+    audio.pause();
+    terminal.classList.add("terminal");
+    terminal.classList.remove("termiblue");
     window.location.href = "#super";
     output.classList.remove("azule");
+    input.classList.remove("azule");
+    user.classList.remove("as");
   },
   resets: () => {
+    audio.pause();
+    terminal.classList.add("terminal");
+    terminal.classList.remove("termiblue");
     output.classList.remove("azule");
+    input.classList.remove("azule");
+
     window.location.href = "#sub";
+    user.classList.remove("as");
+  },
+  traducao: () => {
+    audio.pause();
+    terminal.classList.add("terminal");
+    terminal.classList.remove("termiblue");
+    output.classList.remove("azule");
+    input.classList.remove("azule");
+    addLine("Abrindo traduções...");
+    setTimeout(() => {
+      window.location.href = "../abas/sinners/traducoes/mods.html";
+    }, 500);
   },
   pais: () => {
+    audio.pause();
     output.classList.remove("azule");
+    user.classList.remove("as");
+    terminal.classList.add("terminal");
+    input.classList.remove("azule");
+    terminal.classList.remove("termiblue");
     output.innerHTML += `<img src="../assets/brasil.png" width="200px">`;
   },
   eita: () => {
+    audio.pause();
     output.classList.remove("azule");
+    terminal.classList.add("terminal");
+    input.classList.remove("azule");
+    terminal.classList.remove("termiblue");
     window.location.href = "#lcb";
+    user.classList.remove("as");
   },
   myluck: () => {
+    audio.pause();
+    user.classList.remove("as");
+    input.classList.remove("azule");
+    terminal.classList.add("terminal");
+    terminal.classList.remove("termiblue");
     output.classList.remove("azule");
     alert(posi[Math.floor(Math.random() * posi.length)]);
   },
   naogostei: () => {
+    audio.pause();
+    user.classList.remove("as");
     output.classList.remove("azule");
+    terminal.classList.add("terminal");
+    terminal.classList.remove("termiblue");
+    input.classList.remove("azule");
     alert("vaza");
     addLine("modo auto-destruição...");
     setTimeout(() => {
@@ -187,13 +254,24 @@ const commands = {
     }, 5000);
   },
   gacha: () => {
+    user.classList.remove("as");
+    audio.pause();
+    input.classList.remove("azule");
     output.classList.remove("azule");
+    terminal.classList.add("terminal");
+    terminal.classList.remove("termiblue");
     addLine("analisando sua sorte...");
     setTimeout(() => {
       addLine(vai[Math.floor(Math.random() * vai.length)]);
     }, 5000);
   },
   index: () => {
+    audio.play();
+
+    user.classList.add("as");
+    input.classList.add("azule");
+    terminal.classList.remove("terminal");
+    terminal.classList.add("termiblue");
     output.classList.add("azule");
     output.innerHTML += `<img src="../assets/The_Index_Logo.webp" width="120">`;
     addLine("a cidade te agraceia com o prescrito: ...");
@@ -202,6 +280,11 @@ const commands = {
     }, 3000);
   },
   about: () => {
+    audio.pause();
+    input.classList.remove("azule");
+    user.classList.remove("as");
+    terminal.classList.add("terminal");
+    terminal.classList.remove("termiblue");
     output.classList.remove("azule");
     addLine("Valencina nursefather mais forte e ninguém muda minha opinião");
   },
@@ -212,6 +295,10 @@ function runCommand(cmd) {
   if (commands[cmd]) {
     commands[cmd]();
   } else {
+    user.classList.remove("as");
+    terminal.classList.add("terminal");
+    input.classList.remove("azule");
+    terminal.classList.remove("termiblue");
     output.classList.remove("azule");
     addLine("comando não encontrado 💀 (digite help)");
   }
@@ -239,3 +326,22 @@ function termina() {
     terminale.classList.add("hidden");
   }
 }
+document.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", function (e) {
+    const href = this.getAttribute("href");
+    if (href) {
+      e.preventDefault();
+      document.body.style.opacity = "0";
+      setTimeout(() => {
+        window.location.href = href;
+      }, 500);
+    }
+  });
+});
+window.addEventListener("load", () => {
+  document.body.style.opacity = "0";
+
+  setTimeout(() => {
+    document.body.style.opacity = "1";
+  }, 100);
+});
