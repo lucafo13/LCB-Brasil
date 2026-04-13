@@ -30,27 +30,27 @@ window.addEventListener("scroll", function () {
     document.getElementById("explica").classList.add("show");
   }
 });
-window.addEventListener("scroll", function(){
-  let item = document.getElementById("tabelascroll")
+window.addEventListener("scroll", function () {
+  let item = document.getElementById("tabelascroll");
   let pos = item.getBoundingClientRect().top;
-  if(pos > this.window.innerHeight){
-  item.classList.add("show")
+  if (pos > this.window.innerHeight) {
+    item.classList.add("show");
   }
-})
+});
 fetch("json.json")
-  .then(res => res.json())
-  .then(sinners => {
-    const container = document.getElementById("container")
+  .then((res) => res.json())
+  .then((sinners) => {
+    const container = document.getElementById("container");
 
-    sinners.forEach(s => {
+    sinners.forEach((s) => {
       const card = document.createElement("div");
-      card.classList.add("sinnercard")
+      card.classList.add("sinnercard");
 
       card.innerHTML = `<h2>${s.nome}</h2>
       <img src="${s.img}" alt="${s.nome}">
       <p>${s.numero} Sinner</p>
       <br>
       <button>Ver IDS</button>`;
-    container.appendChild(card);
+      container.appendChild(card);
     });
-  })
+  });

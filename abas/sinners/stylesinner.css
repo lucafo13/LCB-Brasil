@@ -35,8 +35,78 @@ h2 {
 nav {
   font-family: "JetBrains Mono", monospace;
   font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
+}
+
+h1,
+h2 {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #d32f2f;
+  background-color: var(--bdn);
+  overflow: hidden;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border: var(--bordared) 1px;
+  transition: 0.5s;
+  cursor: var(--cursorsel);
+}
+
+li a:hover {
+  background-color: #d32f2f;
+  border: none;
+  color: white;
+  font-weight: bolder;
+  cursor: var(--cursorsel);
+  position: relative;
+}
+
+@keyframes apareceu {
+  0% {
+    rotate: 2deg;
+    transform: translateX(-10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+.cntr {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+li a:hover::after {
+  content: "";
+  background-image: url(../../../assets/chibidon-removebg-preview.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  top: -20px;
+  right: -30px;
+  position: absolute;
+  animation: apareceu 0.5s;
+}
+
+h1,
+h2 {
+  text-shadow: #d32f2f 0 10px 10px;
+  transition: 0.5s;
 }
 .superior {
   opacity: 0;
@@ -54,53 +124,13 @@ nav {
   opacity: 1;
   transform: translateY(0);
 }
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  border: 1px solid #d32f2f;
-  background-color: #1a1a1a;
-  overflow: hidden;
+h1:hover,
+h2:hover {
+  color: #b71c1c;
+  font-weight: bold;
+  transform: translateX(2px);
 }
 
-ul li a {
-  display: block;
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #d32f2f;
-  transition: 0.5s;
-}
-li a:hover {
-  background-color: #d32f2f;
-  border: none;
-  color: white;
-  font-weight: bolder;
-}
-li a:hover::after {
-  background-image: url(../../assets/chibidon-removebg-preview.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100px;
-  height: 100px;
-  top: -20px;
-  right: -30px;
-  position: absolute;
-  animation: apareceu 0.5s;
-}
-@keyframes apareceu {
-  0% {
-    rotate: 2deg;
-    transform: translateX(-10px);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
-}
 ul span {
   float: right;
   display: block;
@@ -111,9 +141,20 @@ ul span {
   align-items: center;
   justify-content: center;
 }
+
+ul img {
+  float: right;
+  display: block;
+
+  width: 20px;
+  height: 20px;
+  margin-left: 6px;
+}
+
 ul li {
   float: left;
 }
+
 .sinnergrid {
   display: flex;
   flex-wrap: wrap;
