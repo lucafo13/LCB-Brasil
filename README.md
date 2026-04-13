@@ -20,4 +20,4 @@ Por probleminhas aqui, criei uma branch nova, se deus quiser agora e só esse
 https://lucafo13.github.io/LCB-Brasil/principal/index.html
 ![Mephistopheles](https://static.wikia.nocookie.net/limbuscompany/images/3/35/S0_1_5.png/revision/latest?cb=20230716085942)
 # Pode ter erros
-**guys GitHub me odeia e o pull deu problema site deve tar dando pau mas amanhã já faço push novo rlx única pessoa q abriu o link**
+**guys fui tentar me achar e usar json e a aba sinners foi comprar cigarros aguardem**
