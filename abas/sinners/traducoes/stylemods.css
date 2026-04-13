@@ -93,7 +93,12 @@ li a:hover {
     transform: translateX(0);
   }
 }
-
+.cntr{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
 li a:hover::after {
   content: "";
   background-image: url(../../../assets/chibidon-removebg-preview.png);

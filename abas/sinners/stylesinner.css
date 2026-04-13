@@ -81,12 +81,25 @@ li a:hover {
   font-weight: bolder;
 }
 li a:hover::after {
-  content: "";
-  background-image: var(--chibi);
-  background-repeat: no-repeat;
+  background-image: url(../../assets/chibidon-removebg-preview.png);
   background-size: cover;
+  background-repeat: no-repeat;
   width: 100px;
   height: 100px;
+  top: -20px;
+  right: -30px;
+  position: absolute;
+  animation: apareceu 0.5s;
+}
+@keyframes apareceu {
+  0% {
+    rotate: 2deg;
+    transform: translateX(-10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 ul span {
   float: right;
