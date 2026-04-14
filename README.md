@@ -13,7 +13,7 @@ Pretendo atualizar a página frequentemente e, dependendo do quão boa ficar at�
 **ESTA NÃO É UMA VERSÃO FINAL**
 Atualizações do projeto serão frequentes... espero
 
-**Está é a Branch master**
+**ESTÁ É A BRANCH MASTER**
 Por probleminhas aqui, criei uma branch nova, se deus quiser agora e só esse
 # Link pra test
 **Use com moderação**
