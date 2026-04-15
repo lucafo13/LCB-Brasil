@@ -1,5 +1,5 @@
 # Wiki-Limbus Company Brasil LCB BRASIL
-![Sinners Group](https://static.wikia.nocookie.net/limbuscompany/images/7/7a/S0_5.png/revision/latest?cb=20230716085942))
+![Sinners Group](https://static.wikia.nocookie.net/limbuscompany/images/7/7a/S0_5.png/revision/latest?cb=20230716085942)
 
 
 Um projeto de uma wiki brasileira sobre Limbus Company e o universo da project moon
@@ -13,7 +13,7 @@ Pretendo atualizar a página frequentemente e, dependendo do quão boa ficar at�
 **ESTA NÃO É UMA VERSÃO FINAL**
 Atualizações do projeto serão frequentes... espero
 
-***Está é a Branch master*
+**ESTÁ É A BRANCH MASTER**
 Por probleminhas aqui, criei uma branch nova, se deus quiser agora e só esse
 # Link pra test
 **Use com moderação**
