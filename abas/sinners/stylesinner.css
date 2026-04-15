@@ -27,7 +27,10 @@ body {
   --space-m: 1.5rem;
   --space-b: 1.7rem;
   --bgimage: url(../../assets/testando12);
-  
+  --font-s: 14px;
+  --font-m: 18px;
+  --font-b: 30px;
+  --tittle-font: 60px;
 
 }
 .davez {
