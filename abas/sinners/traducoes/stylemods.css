@@ -4,12 +4,11 @@ body {
   text-align: center;
   opacity: 1;
   transition: opacity 0.5s ease;
-  background-image:
-    url(../../../assets/bgtr.png);
+  background-image: url(../../../assets/bgtr.png);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  
+
   background-size: cover;
   background-color: #0d0d0d;
 
@@ -49,7 +48,8 @@ html {
   --chibi: url(../assets/chibidon-removebg-preview.png);
   --bwhite: solid #dedede;
   --sobravc: rgba(211, 47, 47, 0.3);
-  --sombrave: rgba(211, 47, 47, 0.45);  --font-s: 14px;
+  --sombrave: rgba(211, 47, 47, 0.45);
+  --font-s: 14px;
   --font-m: 18px;
   --font-b: 30px;
   --tittle-font: 60px;
@@ -106,7 +106,7 @@ li a:hover {
     transform: translateX(0);
   }
 }
-.cntr{
+.cntr {
   justify-content: center;
   display: flex;
   align-items: center;
@@ -355,15 +355,15 @@ p {
   background: red;
   transition: 0.3s;
 }
-.hover-effect{
+.hover-effect {
   text-decoration: none;
   transition: 0.6s ease;
 }
-.hover-effect:hover{
+.hover-effect:hover {
   color: red;
 }
-.hover-effect::after{
-    content: "";
+.hover-effect::after {
+  content: "";
   position: absolute;
   left: 0;
   bottom: -3px;
@@ -372,7 +372,7 @@ p {
   background: red;
   transition: 0.3s;
 }
-.hover-effect:hover::after{
+.hover-effect:hover::after {
   width: 100%;
 }
 .extr a:hover::after {
@@ -388,14 +388,13 @@ p {
   justify-content: center;
   margin-bottom: -20px;
 }
-.ttr a{
-  color: var(--vescuro)
-}.team-box {
-  background: rgba(10, 10, 10, 0.5);
+.ttr a {
+  color: var(--vescuro);
+}
+.team-box {
   padding: 20px;
   border-radius: 10px;
-  border: 1px solid rgba(255, 0, 0, 0.2);
-  box-shadow: 0 0 25px rgba(0,0,0,0.6);
+
   max-width: 600px;
   margin: auto;
   font-family: monospace;
@@ -413,7 +412,7 @@ p {
   display: flex;
   gap: 10px;
   padding: 8px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+
   transition: 0.2s;
 }
 
@@ -421,7 +420,7 @@ p {
   transform: translateX(5px);
   color: #ff4d4d;
 }
-.team-member::after{
+.team-member::after {
   content: "";
   position: relative;
   background: red;
@@ -431,7 +430,7 @@ p {
   bottom: -1px;
   transition: 0.6s;
 }
-.team-member:hover::after{
+.team-member:hover::after {
   width: 100%;
 }
 .rank {
@@ -456,5 +455,4 @@ p {
 
 .team-more a {
   color: white;
-
 }
