@@ -1,3 +1,10 @@
+<p align="center">
+  <img src="47d4eecb9767b9abb03df683d0783d3b.png" alt="LCB Brasil Logo" width="680">
+</p>
+
+
+
+
 # Wiki-Limbus Company Brasil LCB BRASIL
 ![Sinners Group](https://static.wikia.nocookie.net/limbuscompany/images/7/7a/S0_5.png/revision/latest?cb=20230716085942)
 
