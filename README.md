@@ -24,8 +24,8 @@ Atualizações do projeto serão frequentes... espero
 Por probleminhas aqui, criei uma branch nova, se deus quiser agora e só esse
 # Link pra test
 **Use com moderação**
-<a style="text-decoration:none; color:red; font-weight: bolder; letter-spacing: 2px;" href="https://lucafo13.github.io/LCB-Brasil/principal/index.html">AQUI
-<\a>
+<a href="https://lucafo13.github.io/LCB-Brasil/principal/index.html" style="text-decoration:none; color:red; font-weight:bold; letter-spacing:2px;">AQUI</a>
+
 
 ![Mephistopheles](https://static.wikia.nocookie.net/limbuscompany/images/3/35/S0_1_5.png/revision/latest?cb=20230716085942)
 # Pode ter erros
